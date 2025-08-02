@@ -1,83 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Aakash Boutique</title>
-  <link rel="stylesheet" href="./css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegance Boutique - Premium Fashion for Women</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="top-bar">Latest Live Collection</div>
-    <nav class="navbar">
-      <div class="logo-container">
-        <img src="./images/logo.jpg" alt="logo" class="logo-icon">
-        <span class="logo-text">Aakash Boutique</span>
-      </div>
-      <div class="menu-icon" onclick="toggleMenu()">☰</div>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#collections">Collections</a></li>
-        <li><a href="#feedback">Feedback</a></li>
-        <li><a href="#footer">About</a></li>
-      </ul>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Elegance</h2>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#collections" class="nav-link">Collections</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-icons">
+                <i class="fas fa-search" id="search-icon"></i>
+                <i class="fas fa-shopping-bag" id="cart-icon"></i>
+                <span class="cart-count">0</span>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
     </nav>
-  </header>
 
-  <!-- Hero -->
-  <section class="hero-section">
-    <h1>The Summer Coolers</h1>
-    <img src="./images/WhatsApp Image 2025-07-30 at 17.11.34_460e83ea.jpg" alt="Hero Image">
-  </section>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Discover Your Perfect Style</h1>
+                <p class="hero-subtitle">Exquisite fashion collection curated for the modern woman. Elevate your wardrobe with our premium designs.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">Shop Now</button>
+                    <button class="btn btn-secondary">View Collection</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.pexels.com/photos/974911/pexels-photo-974911.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Fashion Model" />
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
 
-  <!-- Collections -->
-  <section id="collections" class="collections">
-    <h2>Collections by Aakash</h2>
-    <p>Explore our stunning ethnic wear for all occasions — casual, festive, or elegant.</p>
-    <div class="btn-group">
-      <button onclick="alert('Viewing New Arrivals')">New Arrival</button>
-      <button onclick="alert('Viewing Best Sellers')">Best Seller</button>
-      <button onclick="alert('Viewing Casual Wear')">Casual Wear</button>
-    </div>
+    <!-- Featured Categories -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="categories-grid">
+                <div class="category-card" data-category="dresses">
+                    <img src="https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Dresses">
+                    <div class="category-overlay">
+                        <h3>Dresses</h3>
+                        <p>Elegant & Chic</p>
+                    </div>
+                </div>
+                <div class="category-card" data-category="tops">
+                    <img src="https://images.pexels.com/photos/7679720/pexels-photo-7679720.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Tops">
+                    <div class="category-overlay">
+                        <h3>Tops</h3>
+                        <p>Stylish Collection</p>
+                    </div>
+                </div>
+                <div class="category-card" data-category="accessories">
+                    <img src="https://images.pexels.com/photos/1927259/pexels-photo-1927259.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Accessories">
+                    <div class="category-overlay">
+                        <h3>Accessories</h3>
+                        <p>Complete Your Look</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="gallery">
-      <img src="./images/WhatsApp Image 2025-07-30 at 17.11.34_460e83ea.jpg" alt="Collection 1">
-      <img src="./images/WhatsApp Image 2025-08-01 at 20.29.15_8e69e2db.jpg" alt="Collection 2">
-    </div>
-  </section>
+    <!-- Collections -->
+    <section id="collections" class="collections">
+        <div class="container">
+            <h2 class="section-title">Featured Collections</h2>
+            <div class="collection-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="new">New Arrivals</button>
+                <button class="filter-btn" data-filter="trending">Trending</button>
+                <button class="filter-btn" data-filter="sale">On Sale</button>
+            </div>
+            <div class="products-grid" id="products-grid">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+            <div class="load-more">
+                <button class="btn btn-outline" id="load-more-btn">Load More</button>
+            </div>
+        </div>
+    </section>
 
-  <!-- Feedback -->
-  <section id="feedback" class="feedback">
-    <h2>What Our Clients Say</h2>
-    <div class="feedback-card">
-      <p>“Beautiful styles and fabrics, I always find something new to love!”</p>
-      <strong>- Sudeepthi</strong>
-    </div>
-    <div class="feedback-card">
-      <p>“Amazing collection and lovely service. My go-to boutique always!”</p>
-      <strong>- Anusha Elluri</strong>
-    </div>
-  </section>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About Elegance</h2>
+                    <p class="about-description">
+                        For over a decade, Elegance Boutique has been at the forefront of women's fashion, 
+                        curating the finest collection of clothing and accessories for the discerning woman. 
+                        Our passion for style and commitment to quality has made us a trusted name in fashion.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>10+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat">
+                            <h3>5000+</h3>
+                            <p>Happy Customers</p>
+                        </div>
+                        <div class="stat">
+                            <h3>50+</h3>
+                            <p>Designer Brands</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.pexels.com/photos/7679470/pexels-photo-7679470.jpeg?auto=compress&cs=tinysrgb&w=600" alt="About Us">
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Footer -->
-  <footer id="footer">
-    <div class="footer-content">
-      <div>
-        <h3>About Aakash Boutique</h3>
-        <p>Empowering women with tradition and elegance, our designs bring out the best in every personality.</p>
-      </div>
-      <div>
-        <h3>Customer Info</h3>
-        <ul>
-          <li><a href="#">Track Your Order</a></li>
-          <li><a href="#">Refund Policy</a></li>
-          <li><a href="#">Shipping Info</a></li>
-        </ul>
-      </div>
-    </div>
-    <p class="copyright">© 2025 Aakash Boutique | All rights reserved</p>
-  </footer>
+    <!-- Services -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>Free Shipping</h3>
+                    <p>Free shipping on orders over $100. Fast and secure delivery to your doorstep.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-undo"></i>
+                    </div>
+                    <h3>Easy Returns</h3>
+                    <p>30-day return policy. Not satisfied? Return it hassle-free for a full refund.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Personal Styling</h3>
+                    <p>Expert stylists available for personal consultations and wardrobe planning.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Round-the-clock customer support to assist you with any queries or concerns.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <script src="./js/script.js"></script>
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our newsletter for the latest fashion trends and exclusive offers.</p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <div class="input-group">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Address</h3>
+                            <p>11/228 Santhapeta Near Bomma kesavula Hospital<br>Nellore, 524001</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+91 7981821092</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>Aakash@eleganceboutique.com</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Elegance</h3>
+                    <p>Your premier destination for luxury women's fashion. Discover timeless elegance and contemporary style.</p>
+                    
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#collections">Collections</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#">Dresses</a></li>
+                        <li><a href="#">Tops & Blouses</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Shoes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Customer Care</h3>
+                    <ul>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Elegance Boutique. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="./js/script.js"></script>
 </body>
 </html>
